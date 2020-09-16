@@ -1,5 +1,6 @@
-<h1><a href="https://mykhalenych.github.io/">NasaApp</a></h1>
-Preview 
+<h1><a href="https://heuristic-goldwasser-a70081.netlify.app">NasaApp</a></h1>
+Preview https://heuristic-goldwasser-a70081.netlify.app
+<br>
 
 <ul>The tech stack is:</ul>
 
@@ -11,11 +12,12 @@ Preview
 <li>React-router-dom</li>
 <li>Redux</li>
 <li>Redux-thunk</li>
-
+<br>
 #Getting Started:
 First of all, clone this repo:
 
 ``` git clone https://github.com/mykhalenych/CookBookApp.git```
+<br>
 Move to the project dir:
 
 ``` npm i```
