@@ -16,12 +16,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
-const photoPerPage = 5;
-const arrayForHoldingPhoto = [];
 
 const LoadMore = ({ photo }) => {
   const classes = useStyles();
 
+  const photoPerPage = 5;
+  let arrayForPhoto = [];
+  
   const [photoToShow, setPhotoToShow] = useState([]);
   const [count, setCount] = useState(1);
   const loopThroughPosts = (count) => {
@@ -31,10 +32,10 @@ const LoadMore = ({ photo }) => {
       i++
     ) {
       if (photo[i] !== undefined) {
-        arrayForHoldingPhoto.push(photo[i]);
+        arrayForPhoto.push(photo[i]);
       }
     }
-    setPhotoToShow(arrayForHoldingPhoto);
+    setPhotoToShow(arrayForPhoto);
   };
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const LoadMore = ({ photo }) => {
     setCount((prevCount) => prevCount + 1);
     loopThroughPosts(count);
   };
-
+  console.log(photoToShow);
   return (
     <>
       {photoToShow.map((item) => (
@@ -57,16 +58,18 @@ const LoadMore = ({ photo }) => {
           />
         </Card>
       ))}
-      <Button
-        className={classes.load}
-        onClick={handleShowMorePosts}
-        type="button"
-        variant="contained"
-        color="primary"
-        fullWidth
-      >
-        Load next photo
-      </Button>
+      {photoToShow.length >= 5 ? (
+        <Button
+          className={classes.load}
+          onClick={handleShowMorePosts}
+          type="button"
+          variant="contained"
+          color="primary"
+          fullWidth
+        >
+          Load next photo
+        </Button>
+      ) : null}
     </>
   );
 };

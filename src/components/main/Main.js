@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Main = ({ photo }) => {
   const classes = useStyles();
-
-  if (!photo) {
+  console.log(photo)
+  if (photo.length === 0 || !photo) {
     return (
       <section className={classes.notfound}>
         <div className={classes.text}>Not photo</div>
