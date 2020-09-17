@@ -16,7 +16,7 @@ Preview https://heuristic-goldwasser-a70081.netlify.app
 #Getting Started:
 First of all, clone this repo:
 
-``` git clone https://github.com/mykhalenych/CookBookApp.git```
+``` git clone https://github.com/mykhalenych/nasaApp.git```
 <br>
 Move to the project dir:
 
